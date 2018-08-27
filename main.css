@@ -76,8 +76,13 @@
 /*end of grid styling*/
 
 
-  .thumbnail{
+.thumbnail{
     background-color: gray;
     height: 200px;
+    border: 1px black solid;
+}
+
+.resultsItem{
+    margin-top: 10px;
     border: 1px black solid;
 }
