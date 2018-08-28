@@ -1,4 +1,4 @@
-function getVidInfo() {
+function getSearchTerm() {
     $('.submitButton').on('click',event => {
         event.preventDefault();
         let vidTitle = $('.textbox').val();
@@ -15,7 +15,7 @@ function renderResults() {
 }
 
 function createList(){
-    getVidInfo()
+    getSearchTerm()
 }
 
 $(createList)
