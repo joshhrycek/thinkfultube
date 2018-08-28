@@ -12,26 +12,43 @@ function getDataFromApi(searchTerm, callback) {
   
   function renderResult(result) {
     return `
-      <div>
-        <img src="${result.items[0].snippet.thumbnails.medium.url}">
+    <p>Returned 5 Results!<p>
+    <section aria-live="assertive">
+      <a href="https://www.youtube.com/watch?v=${result.items[0].id.videoId}">
+      <div>  
+          <img src="${result.items[0].snippet.thumbnails.medium.url}">
       </div>
-      <div>
-      <img src="${result.items[1].snippet.thumbnails.medium.url}">
-    </div>
-    <div>
-    <img src="${result.items[2].snippet.thumbnails.medium.url}">
-  </div>
-  <div>
-  <img src="${result.items[3].snippet.thumbnails.medium.url}">
-</div>
-<div>
-<img src="${result.items[4].snippet.thumbnails.medium.url}">
-</div>
-    `;
+      </a>
+
+      <a href="https://www.youtube.com/watch?v=${result.items[1].id.videoId}">
+        <div>
+          <img src="${result.items[1].snippet.thumbnails.medium.url}">
+      </div>
+      </a>
+
+      <a href="https://www.youtube.com/watch?v=${result.items[2].id.videoId}">
+        <div>
+          <img src="${result.items[2].snippet.thumbnails.medium.url}">
+      </div>
+      </a>
+
+      <a href="https://www.youtube.com/watch?v=${result.items[3].id.videoId}">
+        <div>
+          <img src="${result.items[3].snippet.thumbnails.medium.url}">
+      </div>
+      </a>
+
+      <a href="https://www.youtube.com/watch?v=${result.items[4].id.videoId}">
+        <div>
+          <img src="${result.items[4].snippet.thumbnails.medium.url}">
+      </div>
+      </a>
+
+    </section>`;
   }
   
   function displayYoutubeSearchData(data) {
-    $('.js-search-results').html(renderResult(data));
+    $('.js-search-results').html(renderResult(data)).prop('hidden', false);
   }
   
   function watchSubmit() {
