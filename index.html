@@ -1,31 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="main.css">
-        <link rel="grid layout" href="grid.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="index.js" async defer></script>
+        <meta name="viewport" content="width=device-width">
+        <title>Thinkful Tube</title>
+        <script
+          src="https://code.jquery.com/jquery-3.2.1.min.js"
+          integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+          crossorigin="anonymous"></script>
+        <link href="main.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
-        <main role="main">
-            <form class="row">
-                <legend>Search Video</legend>
-                <fieldset>
-                    <input class="textbox" type="text" required><input class="submitButton" type="submit" title="go">
-                </fieldset>
-            </form>
-            <section class="resultsList">
-                <div class="col-12 resultsItem">
-                    <h2>Vid Title</h2>
-                    <div class="thumbnail col-4"></div>
-                    <p>More From Channel</p>
-                </div>
-            </section>
-        </main>
+      <main>
+        <form class="js-search-form">
+            <legend><h1>Search Youtube Videos</h1></legend>
+            <label for="query">
+            <input type="text" class="js-query"></label>
+            <button type="submit">Search</button>
+          </form>
+          
+          <h2>Thumbnails</h2>
+          <div class="js-search-results">
+            
+          </div>
+      </main>
+      <script src="index.js"></script>
     </body>
 </html>
